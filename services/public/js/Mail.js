@@ -1,2 +1,3 @@
 (function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("body .test[data-v-c6edf24b]{background:red}")),document.head.appendChild(e)}}catch(d){console.error("vite-plugin-css-injected-by-js",d)}})();
 import{_ as s,o as a,r as e,c as n,t as c,a as r,b as p}from"./assets/_plugin-vue_export-helper-BbuFNSSO.js";const l={__name:"Mail",setup(m){a(()=>{console.log("1234")});const t=e(1);return(u,o)=>(r(),n("div",{class:"test",onClick:o[0]||(o[0]=()=>t.value++)},c(t.value),1))}},_=s(l,[["__scopeId","data-v-c6edf24b"]]),i=p(_);i.mount("#mail");
+//# sourceMappingURL=Mail.js.map

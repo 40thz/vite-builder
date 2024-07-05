@@ -5,8 +5,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 const glob = require('glob')
 
-
-export default defineConfig(({ mode }) => {
+export default defineConfig(() => {
     const entryPoints = './services/resources/assets/js/**/*.js'
     const buildDir = 'services/public/js';
 
@@ -31,17 +30,20 @@ export default defineConfig(({ mode }) => {
         vue(),
         cssInjectedByJsPlugin()
       ],
+
       build: {
         outDir: buildDir,
+        sourcemap: true,
+        
         rollupOptions: {
           input: getInputs(),
+
           output: {
             dir: buildDir,
             entryFileNames: '[name].js',
             assetFileNames: undefined,
             manualChunks: undefined,
           },
-          
         }
       }
     };
