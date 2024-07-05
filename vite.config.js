@@ -7,18 +7,22 @@ const glob = require('glob')
 
 
 export default defineConfig(({ mode }) => {
-    const buildDir = mode === 'production' ? 'dist' : 'dev';
+    const entryPoints = './services/resources/assets/js/**/*.js'
+    const buildDir = 'services/public/js';
 
     // Функция для получения точек входа
     const getInputs = () => {
-      const files = glob.sync('./src/**/*.js');
+      const files = glob.sync(entryPoints);
       const entries = {};
 
       files.forEach((file) => {
-        const fileName = file.replace('.js', '');
+        const filePath = file.replace('.js', '');
+        const filePathParts = filePath.split('\\')
+        const fileName = filePathParts[filePathParts.length - 1] 
+   
         entries[fileName] = resolve(__dirname, file);
       });
-
+    
       return entries;
     };
   
@@ -32,9 +36,9 @@ export default defineConfig(({ mode }) => {
         rollupOptions: {
           input: getInputs(),
           output: {
-            dir: `${buildDir}/`,
+            dir: buildDir,
             entryFileNames: '[name].js',
-            assetFileNames: 'assets/[name].[ext]',
+            assetFileNames: undefined,
             manualChunks: undefined,
           },
           
