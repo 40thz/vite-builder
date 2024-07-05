@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue'
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 const glob = require('glob')
-const styles = require('rollup-plugin-styles')
+
 
 export default defineConfig(({ mode }) => {
     const buildDir = mode === 'production' ? 'dist' : 'dev';
-    console.log(styles)
+
     // Функция для получения точек входа
     const getInputs = () => {
       const files = glob.sync('./src/**/*.js');
@@ -23,7 +24,8 @@ export default defineConfig(({ mode }) => {
   
     return {
       plugins: [
-        vue()
+        vue(),
+        cssInjectedByJsPlugin()
       ],
       build: {
         outDir: buildDir,
@@ -33,7 +35,9 @@ export default defineConfig(({ mode }) => {
             dir: `${buildDir}/`,
             entryFileNames: '[name].js',
             assetFileNames: 'assets/[name].[ext]',
+            manualChunks: undefined,
           },
+          
         }
       }
     };
