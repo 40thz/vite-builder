@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
-import tmp from './Mail/Mail.vue'
+import tmp from './Friends.vue'
 
 const app = createApp(tmp)
 
-app.mount('#mail')
+app.mount('#frisends')

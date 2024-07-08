@@ -1,7 +1,8 @@
 {
   "name": "vite-bundler",
   "scripts": {
-    "build": "vite build"
+    "dev": "vite dev",
+    "build": "vite build --watch"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

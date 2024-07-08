@@ -5,7 +5,7 @@ onMounted(() => {
     console.log('1234')
 })
 
-const counter = ref(1)
+const counter = ref(231)
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const counter = ref(1)
 <style scoped lang="scss">
 body {
   .test {
-    background: red;
-}
+    background: yellow; 
+  } 
 }
 </style>

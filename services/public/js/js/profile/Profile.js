@@ -1,0 +1,3 @@
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("body .test[data-v-84428e8f]{background:red}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import{_ as e,o as s,r as a,a as n,c as r,t as c,b as p}from"../../assets/_plugin-vue_export-helper-BI1qerUz.js";const l={__name:"Profile",setup(u){s(()=>{console.log("1234")});const o=a(1);return(f,t)=>(n(),r("div",{class:"test",onClick:t[0]||(t[0]=()=>o.value++)},c(o.value),1))}},_=e(l,[["__scopeId","data-v-84428e8f"]]),i=p(_);i.mount("#profile");
+//# sourceMappingURL=Profile.js.map

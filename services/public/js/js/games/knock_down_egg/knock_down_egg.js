@@ -1,0 +1,3 @@
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("body .test[data-v-1b837748]{background:red}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import{_ as e,o as n,r as s,a,c,t as _,b as r}from"../../../assets/_plugin-vue_export-helper-BI1qerUz.js";const p={__name:"knock_down_egg",setup(k){n(()=>{console.log("1234")});const o=s(1);return(m,t)=>(a(),c("div",{class:"test",onClick:t[0]||(t[0]=()=>o.value++)},_(o.value),1))}},l=e(p,[["__scopeId","data-v-1b837748"]]),u=r(l);u.mount("#knock_down_egg");
+//# sourceMappingURL=knock_down_egg.js.map

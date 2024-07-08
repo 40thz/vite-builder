@@ -1,0 +1,3 @@
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("body .test[data-v-3268d423]{background:red}")),document.head.appendChild(e)}}catch(d){console.error("vite-plugin-css-injected-by-js",d)}})();
+import{_ as t,o as s,r as a,a as c,c as n,t as _,b as r}from"../../../assets/_plugin-vue_export-helper-BI1qerUz.js";const p={__name:"wheel_of_magic",setup(i){s(()=>{console.log("1234")});const o=a(1);return(u,e)=>(c(),n("div",{class:"test",onClick:e[0]||(e[0]=()=>o.value++)},_(o.value),1))}},l=t(p,[["__scopeId","data-v-3268d423"]]),m=r(l);m.mount("#wheel_of_magic");
+//# sourceMappingURL=wheel_of_magic.js.map

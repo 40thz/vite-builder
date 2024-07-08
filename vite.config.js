@@ -17,8 +17,8 @@ export default defineConfig(() => {
       files.forEach((file) => {
         const filePath = file.replace('.js', '');
         const filePathParts = filePath.split('\\')
-        const fileName = filePathParts[filePathParts.length - 1] 
-   
+        const fileName = filePathParts.slice(3).join('\\')
+    
         entries[fileName] = resolve(__dirname, file);
       });
     
@@ -28,13 +28,17 @@ export default defineConfig(() => {
     return {
       plugins: [
         vue(),
-        cssInjectedByJsPlugin()
+        cssInjectedByJsPlugin({
+          relativeCSSInjection: true
+        })
       ],
 
       build: {
         outDir: buildDir,
         sourcemap: true,
-        
+        minify: true,
+        target: ['chrome58', 'ios11'],
+
         rollupOptions: {
           input: getInputs(),
 

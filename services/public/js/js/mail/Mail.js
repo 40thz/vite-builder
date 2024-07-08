@@ -1,0 +1,3 @@
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("body .test[data-v-ff512c8e]{background:#ff0}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import{_ as s,o as a,r as e,a as n,c,t as r,b as p}from"../../assets/_plugin-vue_export-helper-BI1qerUz.js";const l={__name:"Mail",setup(m){a(()=>{console.log("1234")});const t=e(231);return(u,o)=>(n(),c("div",{class:"test",onClick:o[0]||(o[0]=()=>t.value++)},r(t.value),1))}},_=s(l,[["__scopeId","data-v-ff512c8e"]]),i=p(_);i.mount("#mail");
+//# sourceMappingURL=Mail.js.map
